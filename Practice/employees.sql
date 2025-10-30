@@ -63,4 +63,7 @@ WHERE emp_id = 1;
 
 SELECT * FROM employees;
 
-.tables
+DELETE from employees
+WHERE name = 'Ravi';
+
+SELECT * FROM employees;
