@@ -38,3 +38,43 @@ VALUES
 
 SELECT * FROM movies;
 SELECT * FROM actors;
+
+SELECT title AS Movie_Title, rating AS IMDb_Rating
+FROM movies;
+
+-- Movies table data assumed to exist
+
+-- 1. Select all Action movies with rating > 8.5
+SELECT title AS Movie, rating AS IMDb_Rating
+FROM movies
+WHERE genre = 'Action' AND rating > 8.5;
+
+-- 2. Movies released between 2000 and 2015
+SELECT title, release_year
+FROM movies
+WHERE release_year BETWEEN 2000 AND 2015;
+
+-- 3. Movies with “Dark” in title
+SELECT title AS Movie_Title
+FROM movies
+WHERE title LIKE '%Dark%';
+
+-- 4. Movies that are NOT Romance
+SELECT title, genre
+FROM movies
+WHERE NOT genre = 'Romance';
+
+SELECT a.actor_name AS Actor, m.title AS Movie, m.genre AS Genre,a.movie_id,m.movie_id
+FROM actors a
+JOIN movies m
+ON a.movie_id = m.movie_id
+WHERE m.rating > 8.5;
+
+
+DROP TABLE frds;
+
+
+.tables --Show all the TABLE related to DATABASE
+.schema movies --Show the SCHEMA of the TABLE
+PRAGMA table_info(movies);
+
