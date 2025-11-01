@@ -42,5 +42,28 @@ FROM employees
 GROUP BY department
 HAVING AVG(salary) > 50000;
 
+SELECT department,COUNT(DISTINCT city) as city FROM employee
+GROUP BY department;
+
+SELECT * FROM employee;
+SELECT department,MIN(salary) FROM employee
+GROUP BY department;
+
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department
+HAVING SUM(salary) > 80000
+ORDER BY total_salary DESC;
+
+SELECT department from employee
+GROUP BY salary
+HAVING sum(salary)>1500000;
+
+SELECT age
+    CASE 
+        WHEN age<30 THEN 'young' 
+        ELSE  'senior'
+    END as age_group
+from employee;
 
 
