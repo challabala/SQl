@@ -13,3 +13,5 @@ ALTER Table employee
 RENAME COLUMN department to dept;
 
 SELECT * from employee;
+
+
