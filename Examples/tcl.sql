@@ -24,7 +24,7 @@ PRAGMA table_info(Student);
 INSERT INTO Student (name, department, age) VALUES
 ('Rohan', 'CSE', 20),
 ('Anitha', 'ECE', 21),
-('Balaji', 'CSE', 22);
+('balas', 'CSE', 22);
 
 SELECT * from Student;
 
