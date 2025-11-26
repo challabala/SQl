@@ -84,3 +84,15 @@ END;
 
 
 
+CREATE TABLE employees (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    salary INT
+);
+
+INSERT INTO employees VALUES
+(1, 'Rohan', 20000),
+(2, 'Anitha', 30000),
+(3, 'Kiran', 25000);
+
+
